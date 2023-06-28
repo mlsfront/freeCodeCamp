@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Markers</title>
+    <!--<link rel="stylesheet" href="_css/03_conjunto-de-marcadores-coloridos.css">-->
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      p.text-center {
+        font-size: 1.2em;
+      }
+
+      .text-center {
+        text-align: center;
+      }  
+
+      .container, .primary, .second {
+        background-color: rgb(255, 255, 255);
+        padding: 10px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .marker {
+        width: 200px;
+        height: 25px;
+        margin: 10px auto;
+      }
+
+      /* PRIMÁRIAS  */
+      .red {
+        background-color: rgb(255, 0, 0);
+      }
+
+      .green {
+        background-color: rgb(0, 255, 0);
+      }
+
+      .blue {
+        background-color: rgb(0, 0, 255);
+      }
+
+
+      /* SECUNDÁRIAS */
+      .yellow {
+        background-color: rgb(255, 255, 0);
+      }
+
+      .ciano {
+        background-color: rgb(0, 255, 255);
+      }
+
+      .magenta {
+        background-color: rgb(255, 0, 255);
+      }
+
+
+      /* TERCIÁRIAS */
+      .orange {
+        background-color: rgb(255, 127, 0);
+      }
+
+      .green-primavera {
+        background-color: rgb(0, 255, 127);
+      }
+
+      .violeta {
+        background-color: rgb(127, 0, 255);
+      }
+
+      /* PERSONALIZADA */
+      .cap {
+        width: 60px;
+        height: 25px;
+      }
+
+      .sleeve {
+        width: 110px;
+        height: 25px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-left: 10px double rgba(0, 0, 0, 0.75);
+      }
+
+      .cap, .sleeve {
+        display: inline-block;
+      }
+
+      .red-cap-sleeve {
+        background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+        box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+      }
+
+      .green-cap-sleeve {
+        background: linear-gradient(#55680D, #71F53E, #116C31);
+        box-shadow: 0 0 20px 0 #3B7E20CC;
+      }
+
+      .blue-cap-sleeve {
+        background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+        box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+      }
+
+      .left, .center, .right {
+        width: 30%;
+        margin: 10px;
+      }
+
+      .left {
+        float: left;
+      }
+
+      .right {
+        float: right;
+      }
+
+      .id-color {
+        text-align: center;
+        padding: 3px;
+        opacity: 0.5;
+      }
+
+      /* Inicio margem */
+
+      .mt-1{
+          margin-top: 2px;
+      }
+
+      .mt-2{
+          margin-top: 4px;
+      }
+
+      .mt-3{
+          margin-top: 6px;
+      }
+
+      .mt-4{
+          margin-top: 8px;
+      }
+
+      .mt-5{
+          margin-top: 10px;
+      }
+
+      .mt-6{
+          margin-top: 12px;
+      }
+
+      .mb-1{
+          margin-bottom: 2px;
+      }
+
+      .mb-2{
+          margin-bottom: 4px;
+      }
+
+      .mb-3{
+          margin-bottom: 6px;
+      }
+
+      .mb-4{
+          margin-bottom: 8px;
+      }
+
+      .mb-5{
+          margin-bottom: 10px;
+      }
+
+      .mb-6{
+          margin-bottom: 12px;
+      }
+
+      /* Fim margem */
+
+      /* Inicio texto */
+
+      .text-blue{
+          color: blue;
+      }
+
+      .text-green{
+          color: green;
+      }
+
+      .text-orange{
+          color: orange;
+      }
+
+      .text-red{
+          color: red;
+      }
+
+      .text-dark{
+          color: dark;
+      }
+
+      .text-white {
+        color: white;
+      }
+
+      .text-black {
+        color: black;
+      }
+      /* Fim texto */
+
+      /* Inicio tamanho fonte */
+
+      .fs-3{
+          font-size: 10px;
+      }
+
+      .fs-4{
+          font-size: 14px;
+      }
+
+      /* Fim tamanho fonte */
+    </style>
+  </head>
+  <body>
+    <h1>CSS Color Markers</h1>
+    <div class="container">
+      <!-- Primary -->
+      <div class="primary">
+        <!-- Cores primarias -->
+        <div class="left">
+          <p class="text-center">Cores primarias</p>
+          <div class="marker red">
+            <p class="id-color">rgb(255, 0, 0);</p>
+          </div>
+          <div class="marker green">
+            <p class="id-color">rgb(0, 255, 0);</p>
+          </div>
+          <div class="marker blue">
+            <p class="id-color text-white">rgb(0, 0, 255);</p>
+          </div>
+        </div>
+        
+        <!-- Cores secundarias -->
+        <div class="center">
+          <p class="text-center">Cores secundárias</p>
+          <div class="marker yellow">
+            <p class="id-color text-dark">rgb(255, 255, 0);</p>
+          </div>
+          <div class="marker ciano">
+            <p class="id-color text-dark">rgb(0, 255, 255);</p>
+          </div>
+          <div class="marker magenta">
+            <p class="id-color text-black">rgb(255, 0, 255);</p>
+          </div>
+        </div>
+        
+        <!-- Cores terciarias -->
+        <div class="right">
+          <p class="text-center">Cores terciárias</p>
+          <div class="marker orange">
+            <p class="id-color text-dark">rgb(255, 127, 0);
+          </div>
+          <div class="marker green-primavera">
+            <p class="id-color text-dark">rgb(0, 255, 127);
+          </div>
+          <div class="marker violeta">
+            <p class="id-color text-white">rgb(127, 0, 255);
+          </div>
+        </div>
+      </div>  
+
+      <!-- Second -->
+      <div class="second">
+        <div class="left">
+          <p class="text-center">Cores</p>
+          <div class="marker red">
+          </div>
+          <div class="marker green">
+          </div>
+          <div class="marker blue">
+          </div>
+        </div>
+        
+        <div class="center">
+          <p class="text-center">Cores</p>
+          <div class="marker red">
+          </div>
+          <div class="marker green">
+          </div>
+          <div class="marker blue">
+          </div>
+        </div>
+        
+        <div class="right">
+          <p class="text-center">Cores</p>
+          <div class="marker red-cap-sleeve">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+          </div>
+          <div class="marker green-cap-sleeve">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+          </div>
+          <div class="marker blue-cap-sleeve">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+          </div>
+        </div>
+      </div>
+         
+    </div>
+  </body>
+</html>

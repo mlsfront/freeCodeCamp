@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Interação</title>
+  <!--<link rel="stylesheet" href="_css/05_projeto-certificado.css">-->
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border: none;
+      }
+
+      body {
+        background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+        box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      #title-desc {
+        text-align: center;
+        color: bisque;
+        padding: 44px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      #title {
+        margin-bottom: 5px;
+        text-shadow: 2px 1px black;
+      }
+
+      #description {
+        text-shadow: 1px 1px black;
+      }
+
+      .main {
+        width: 100%;
+        margin: auto;
+      }
+
+      form {  
+        background-color: rgba(27, 27, 50, 0.1);
+        width: 78vw;
+        max-width: 600px;
+        min-width: 400px;
+        margin: 0 auto;
+        padding: 0 0.7em 1em;
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 7px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 2.2em;
+        padding: 5px 5px;
+      }
+
+      fieldset {
+        border: none;
+        padding: 1rem 0;
+        border-bottom: 1px solid #3b3b4f;
+      }
+
+      label {
+        display: block;
+        margin: 1rem 0;
+        color: blanchedalmond;
+      }
+
+      #name-label, #email-label, #number-label{
+        text-shadow: 1px 1px black;
+      }
+
+      #number-label {
+        margin-bottom: 5px;
+      }
+
+      input, textarea {
+        background-color: rgba(27, 27, 50, 0.2);
+        color: blanchedalmond;
+        margin-top: 3px;
+      }
+
+      /* HELPER */
+      .info {
+        font-size: 0.8em;
+      }
+
+      .text-p {
+        color: blanchedalmond;
+        text-shadow: .5px .5px black;
+        margin: -5px 3px 10px;
+        font-family: Verdana, sans-serif;
+        font-size: 1em;
+      }
+
+      .opniao-label, .inter-label, .comentario-label {
+        margin: -2px 3px auto;
+        padding: 0 auto;
+      }
+
+      .inline {
+        width: unset;
+        vertical-align: middle;
+      }
+
+      /* SELECT */
+      #dropdown-label {
+        margin: 0 auto 7px;
+      }
+
+      /* INTERAÇÃO */
+      input[type="checkbox"] {
+        margin: 0 auto;
+        padding: 0 auto;
+      }
+
+      /* TEXTAREA */
+      textarea {
+        margin-top: 2px;
+      }
+
+      /* ENVIAR */
+      input[type="submit"] {
+        display: block;
+        width: 98%;
+        margin: 1em auto;
+        height: 1.8em;
+        font-size: 1rem;
+        background-color: bisque;
+        box-shadow: 0 0 7px 0 black;
+        min-width: 300px;
+        color: black;
+      }
+  </style>
+</head>
+
+<body>
+  <!-- Titulo do formulario -->
+  <div id="title-desc">
+    <h1 id="title">Formulário de Interação</h1>
+    <!-- Descicao form-->
+    <p id="description">Sua interação é muito importante. Obrigado!</p>
+    <span class="info">campo com (*) precisa ser informado:</span>
+  </div>
+
+  <div class="main">  
+    <!-- Formulario-->
+    <form id="survey-form" method="post" action="">
+      <!-- Primeiro fieldset -->  
+      <fieldset>
+        <!-- Nome -->
+        <label id="name-label" for="name">Name:<span>*</span> 
+          <input id="name" name="name" type="text" placeholder="Digite seu nome..." required autofocus  /></label>
+        <!-- E-mail -->  
+        <label id="email-label" for="email">E-mail:<span>*</span> 
+          <input id="email" name="email" type="email" placeholder="Digite seu e-mail..." required /></label>
+        <!-- Número -->  
+        <label id="number-label" for="number">Ano de nascimento: 
+          <input id="number" name="number" type="number" min="1944" max="2007" placeholder="Digite o ano que você nasceu..." /></label>
+      </fieldset>
+      <!-- Opção -->
+      <fieldset>
+        <label id="dropdown-label"><p class="text-p">Escolha uma opção da lista:<span>*</span></p>
+          <select id="dropdown" name="dropdown" required>
+            <option value="" name="vazio">Clique para escolher</option>
+            <option value="1" name="amo-1">Amo freeCodeCamp</option>
+            <option value="2" name="agradeco-2">Agradeço freeCodeCamp</option>
+            <option value="3" name="satisfeito-3">Satisfeito com freeCodeCamp</option>
+          </select>
+        </label>
+      </fieldset>
+      <!-- Opnião -->
+      <fieldset id="opniao">
+        <p class="text-p">Está aprendendo com freeCodecamp?<span>*</span></p>
+        <label class="opniao-label">Sim: 
+          <input class="inline" type="radio" name="sim-nao" value="sim" checked /></label>
+        <label class="opniao-label">Não: 
+          <input class="inline" type="radio" name="sim-nao" value="sim" /></label>
+      </fieldset>
+      <!-- Interação -->
+      <fieldset id="interacao">        
+        <p class="text-p">Quais tecnologias você gosta de aplicar?<span>*</span></p>
+        <label class="inter-label">
+          <input class="inline" name="html" value="html" type="checkbox" checked /> HTML</label>
+        <label class="inter-label">
+          <input class="inline" name="css" value="css" type="checkbox" /> CSS</label>
+        <label class="inter-label">
+          <input class="inline" name="javaScript" value="javaScript" type="checkbox" /> JavaScript</label>
+        <label class="inter-label">
+          <input class="inline" name="php" value="php" type="checkbox" /> PHP</label>
+        <label class="inter-label">
+          <input class="inline" name="sql" value="sql" type="checkbox" /> SQL</label>
+        <label class="inter-label">
+          <input class="inline" name="nodejs" value="nodejs" type="checkbox" /> Node.js</label>
+        <label class="inter-label">
+          <input class="inline" name="react" value="react" type="checkbox" /> React</label>
+        <label class="inter-label">
+          <input class="inline" name="wordpress" value="wordpress" type="checkbox" /> WordPress</label>
+      </fieldset>
+      <!-- Comentário -->
+      <fieldset>
+        <label class="comentario-label" for="comentario"><p class="text-p">Deixe seu comentário:</p>
+          <textarea id="comentario" name="comentario" rows="3" cols="30" placeholder="Fique a vontade para fazer uma crítica ou sugestão"></textarea></label>
+      </fieldset>      
+      <input type="submit" value="Enviar">
+    </form>
+  </div>  
+</body>  
+</html>
