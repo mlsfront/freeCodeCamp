@@ -20,5 +20,22 @@
 
 #### Visite a [Plataforma](https://freecodecamp.org/) e... *comece a estudar*!
 
-> No segundo projeto para **Certificação Design responsivo para a web** a solicitação foi fazer uma página de [homenagem](mlsfront.github.io/freeCodeCamp), e humildemente escolhi fazer para o freeCodeCamp, pois sou muito grato por esse projeto fantástico do Quincy Larson e toda equipe!
+> No segundo projeto para **Certificação Design responsivo para a web** a solicitação foi fazer uma página de [homenagem](https://mlsfront.github.io/freeCodeCamp), e humildemente escolhi fazer para o freeCodeCamp, pois sou muito grato por esse projeto fantástico do Quincy Larson e toda equipe!
 > Aproveitei para criar o repositório atual, e armazenar o conteúdo das aulas.
+
+¬Ps: Deixarei o CSS interno para poder visualizar como págna da web caso tenha interesse.
+
+## Projetos das aulas de:
+
+### Certificação Design responsivo para a web
+1. [Fotos de gatos](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/01_aplicativo-de-fotos-de-gatos.html)
+2. [Menu de restaurante](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/02_menu-de-restaurante.html)
+3. [Conjunto de marcadores coloridos](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/03_conjunto-de-marcadores-coloridos.html)
+4. [Construindo uma página de cadastro](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/04_construindo-uma-página-de-cadastro.html)
+5. [Projeto certificado](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/05_projeto-certificado.html)
+6. [Obra de arte retangular](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/06_obra-de-arte-retangular.html)
+7. [Galeria de fotos responsiva](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/07_galeria-de-fotos-responsiva.html)
+8. [Tipografia rotulo nutricional](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/08_tipografia-rotulo-nutricional.html)
+9. [Questionario na pagina](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/09_questionario-na-pagina.html)
+0. [Projeto certificado](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/10_projeto-certificado.html)
+1. [Pseudosseletores folha saldo](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/11_pseudosseletores-folha-saldo.html)
