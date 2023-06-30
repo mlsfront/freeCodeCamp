@@ -39,3 +39,4 @@
 9. [Questionario na pagina](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/09_questionario-na-pagina.html)
 0. [Projeto certificado](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/10_projeto-certificado.html)
 1. [Pseudosseletores folha saldo](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/11_pseudosseletores-folha-saldo.html)
+2. [Pintura Picasso](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/12_pintura-picasso.html)
