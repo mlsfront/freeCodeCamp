@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentação Técnica</title>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      * {
+        scroll-behavior: smooth;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F8F8F8;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      line-height: 1.5;
+    }
+
+    #navbar {
+      background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 300px;
+      height: 100%;
+      border-right: double;
+      border-right-color: #00F;
+    } 
+
+    #navbar header {
+      margin: 10px;
+      text-align: center;
+      color: #F8F8F8;  
+    }
+
+    header {
+      font-size: 1.6em;
+    }
+
+    #main-doc header {
+      text-align: left;
+      margin: 0px;
+    }
+
+    #navbar ul {
+      height: 100%;
+      padding: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #navbar li {
+      color: hsl(223, 80%, 90%);
+      border-top: 1px solid;
+      list-style: none;
+      width: 100%;
+    }
+
+    #navbar li:last-child {
+      border-bottom: double;
+    }
+
+    #navbar a {
+      display: block;
+      padding: 12px 30px;
+      color: #F8F8F8;
+      text-decoration: none;
+    }
+
+    #main-doc {
+      margin-left: 310px;
+      padding: 20px;
+      margin-bottom: 110px;
+    }
+
+    section li {
+      list-style-type: square;
+      margin: 15px 0px 0px 20px;
+    }
+
+    #Pseudo_classe li {
+      list-style-type: none !important;
+    }
+
+    strong {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: large;
+    }
+
+    code {
+      display: block;
+      text-align: left;
+      white-space: pre-line;
+      line-height: 2;
+      background-color: hsl(223, 80%, 97%);
+      padding: 0 15px 25px;
+      margin: 10px 10px 8px;
+      border-radius: 5px;
+    }
+
+    section > .code {
+      background-color: hsl(223, 80%, 90%);
+      color: rgba(0, 0, 0, 0.8);
+      border: solid 1px #00F;
+      border-radius: 3px;
+      margin: 4px -2px;
+      padding: 4px 6px 8px;
+    }
+
+    section > ul > li > .nota {
+      font-weight: bold;
+      color: hsl(223, 80%, 90%);
+      text-shadow: 1px 1px 1px #00F;
+    }
+
+    .coment {
+      color: #089611;
+    }
+
+    .pseudo-color {
+      font-weight: bold;
+    }
+
+    .tag {
+      color: #F00;
+    }
+
+    .color-blue {
+      color: #00F;
+    }
+
+    @media (max-width: 680px) {
+      #navbar {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        border: none;
+        border-bottom: 2px solid;
+      }
+
+      #navbar li:last-child {
+        border-bottom: none !important;
+      }
+
+      #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 320px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">  
+    <header>Documentação HTML</header>
+
+    <ul>
+      <li><a class="nav-link" href="#Elementos">Elementos</a></li>
+      <li><a class="nav-link" href="#Atributos">Atributos</a></li>
+      <li><a class="nav-link" href="#Classes">Classes</a></li>
+      <li><a class="nav-link" href="#Semantica">Semantica</a></li>
+      <li><a class="nav-link" href="#Pseudoclasses">Pseudoclasses</a></li>
+    </ul> 
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Elementos">
+      <header>Elementos</header>
+      
+      <p>Um elemento <strong>HTML</strong> é definido por uma tag inicial, algum conteúdo e uma tag final.</p>
+      <p>O elemento <strong>HTML</strong> é tudo, desde a tag inicial até a tag final:</p>
+      
+      <div class="code">
+        <code>  
+          &lt;<span class="tag">h1</span>&gt;Meu primeiro cabeçalho&lt;<span class="tag">/h1</span>&gt;
+          &lt;<span class="tag">p</span>&gt;Meu primeiro parágrafo.&lt;<span class="tag">/p</span>&gt;
+        </code>
+      </div>
+
+      <ul>
+        <li><span class="nota">Nota:</span> Alguns Elementos <strong>HTML</strong> não possuem conteúdo (como o elemento &lt;<span class="tag">br</span>&gt;). Esses Elementos são chamados de Elementos vazios. Elementos vazios não possuem uma tag final!</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Atributos">
+      <header>Atributos</header>
+      
+      <p>Os Atributos <strong>HTML</strong> fornecem informações adicionais sobre os Elementos <strong>HTML</strong>.</p>
+      <p>Servem como propriedades específicas ou formatação. Um atributo é seguido de um valor de atributo, ligados por um sinal de igual (=), dentre aspas (""):</p>
+      
+      <div class="code">
+        <code>  
+          &lt;<span class="tag">h1 id="title"</span>&gt;Meu primeiro cabeçalho&lt;<span class="tag">/h1</span>&gt;
+          &lt;<span class="tag">p style="color:blue;"</span>&gt;Meu primeiro parágrafo.&lt;<span class="tag">/p</span>&gt;
+        </code>
+      </div>
+      
+      <ul>
+        <li><span class="nota">Nota:</span> Todos os Elementos <strong>HTML</strong> podem ter Atributos, e são sempre especificados na tag de início</li>
+        <li>Os Atributos geralmente vêm em pares de nome/valor como: name="value"</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Classes">
+      <header>Classes</header>      
+
+      <p>O class atributo geralmente é usado para apontar para um nome de classe em uma folha de estilo. Também pode ser usado por um JavaScript para acessar e manipular Elementos específico.</p>
+      <p>Em um documento <strong>HTML</strong> podemos ter Elementos diferentes usando a mesma class e definirmos estilo diferentes:</p>
+      
+      <div class="code">
+        <code>  
+          &lt;<span class="tag">h1 class="cor-blue"</span>&gt;<span class="color-blue">TÍTULO COM COR AZUL</span>&lt;<span class="tag">/h1</span>&gt;
+          &lt;<span class="tag">p class="cor-blue"</span>&gt;<span class="color-blue">Apenas esse parágrafo com cor azul</span>&lt;<span class="tag">/p</span>&gt;
+          &lt;<span class="tag">p</span>&gt;Esse parágrafo não tem cor azul.&lt;<span class="tag">/p</span>&gt;
+        </code>
+      </div>
+      
+      <ul>
+        <li><span class="nota">Nota:</span> O atributo class pode ser usado em qualquer elemento <strong>HTML</strong>.<br /> Observação: o nome da classe diferencia maiúsculas de minúsculas!</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Semantica">
+      <header>Semantica</header>
+      
+      <p>Um elemento semântico descreve claramente seu significado tanto para o navegador quanto para o desenvolvedor.</p>
+      <p>Exemplos de Elementos semânticos : &lt;<span class="tag">header</span>&gt;, &lt;<span class="tag">h1</span>&gt;, &lt;<span class="tag">nav</span>&gt;, &lt;<span class="tag">section</span>&gt;, &lt;<span class="tag">footer</span>&gt;, etc... </p>
+
+      <div class="code">
+        <code>  
+          &lt;<span class="tag">header</span>&gt;
+          &nbsp;&nbsp;&lt;<span class="tag">h1</span>&gt;Algum título dentro do cabeçalho&lt;<span class="tag">/h1</span>&gt;
+          &lt;<span class="tag">/header</span>&gt;          
+          &lt;<span class="tag">nav</span>&gt;          
+          &nbsp;&nbsp;<span class="coment">&lt;!-- Aqui vai o conteúdo do menu --&gt;</span>
+          &lt;<span class="tag">/nav</span>&gt;
+          &lt;<span class="tag">section</span>&gt;
+          &nbsp;&nbsp;&lt;<span class="tag">article</span>&gt;
+          &nbsp;&nbsp;<span class="coment">&lt;!-- Aqui vai o artigo dentro de uma seção --&gt;</span>
+          &nbsp;&nbsp;&lt;<span class="tag">/article</span>&gt;
+          &lt;<span class="tag">/section</span>&gt;
+          &lt;<span class="tag">footer</span>&gt;
+          &nbsp;&nbsp;<span class="coment">&lt;!-- Aqui vai o conteúdo do rodapé --&gt;</span>
+          &lt;<span class="tag">/footer</span>&gt;
+        </code>
+      </div>
+      
+      <ul>
+        <li><span class="nota">Nota:</span> Alguns Elementos <strong>HTML</strong> não possuem conteúdo (como o elemento &lt;<span class="tag">br</span>&gt;). Esses Elementos são chamados de Elementos vazios. Elementos vazios não possuem uma tag final!</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Pseudoclasses">
+      <header>Pseudoclasses</header>
+      
+      <p>Uma pseudo-classe CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado.</p>
+      <p>Não apenas em relação ao conteúdo da árvore do documento, mas também em relação a fatores externos como o histórico de navegação (:visited, por exemplo), o status do seu conteúdo (como :checked em certos Elementos de um formulário), ou a posição do mouse (como :hover, que permite saber se o mouse está sobre um elemento ou não).</p>
+
+      <div class="code">
+        <code>
+        <span class="coment">/* Acrescentando uma margem apenas ao último elemento ".main-section" dentre outros */</span>
+        .main-section:last-child {
+        &nbsp;&nbsp;margin-bottom: 25px;
+        }
+        </code>
+      </div>
+      
+      <ul>
+        <li><span class="nota">Nota:</span> Pseudo-Classes padrão</li>
+        <li><span class="pseudo-color">:</span>active</li>
+        <li><span class="pseudo-color">:</span>checked</li>
+        <li><span class="pseudo-color">:</span>default</li>
+        <li><span class="pseudo-color">:</span>dir()</li>
+        <li><span class="pseudo-color">:</span>disabled</li>
+        <li><span class="pseudo-color">:</span>empty</li>
+        <li><span class="pseudo-color">:</span>enabled</li>
+        <li><span class="pseudo-color">:</span>first</li>
+        <li><span class="pseudo-color">:</span>first-child</li>
+        <li><span class="pseudo-color">:</span>first-of-type</li>
+        <li><span class="pseudo-color">:</span>fullscreen</li>
+        <li><span class="pseudo-color">:</span>focus</li>
+        <li><span class="pseudo-color">:</span>hover</li>
+        <li><span class="pseudo-color">:</span>indeterminate</li>
+        <li><span class="pseudo-color">:</span>in-range</li>
+        <li><span class="pseudo-color">:</span>invalid</li>
+        <li><span class="pseudo-color">:</span>lang()</li>
+        <li><span class="pseudo-color">:</span>last-child</li>
+        <li><span class="pseudo-color">:</span>last-of-type</li>
+        <li><span class="pseudo-color">:</span>left</li>
+        <li><span class="pseudo-color">:</span>link</li>
+        <li><span class="pseudo-color">:</span>not()</li>
+        <li><span class="pseudo-color">:</span>nth-child()</li>
+        <li><span class="pseudo-color">:</span>nth-last-child()</li>
+        <li><span class="pseudo-color">:</span>nth-last-of-type()</li>
+        <li><span class="pseudo-color">:</span>nth-of-type()</li>
+        <li><span class="pseudo-color">:</span>only-child</li>
+        <li><span class="pseudo-color">:</span>only-of-type</li>
+        <li><span class="pseudo-color">:</span>optional</li>
+        <li><span class="pseudo-color">:</span>out-of-range</li>
+        <li><span class="pseudo-color">:</span>read-only</li>
+        <li><span class="pseudo-color">:</span>read-write</li>
+        <li><span class="pseudo-color">:</span>required</li>
+        <li><span class="pseudo-color">:</span>right</li>
+        <li><span class="pseudo-color">:</span>root</li>
+        <li><span class="pseudo-color">:</span>scope</li>
+        <li><span class="pseudo-color">:</span>target</li>
+        <li><span class="pseudo-color">:</span>valid</li>
+        <li><span class="pseudo-color">:</span>visited</li>
+      </ul>
+    </section>
+  </main>
+
+</body>  
+</html>
