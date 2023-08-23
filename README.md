@@ -44,3 +44,4 @@
 4. [Projeto certificado](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/14_projeto-certificado.html)
 5. [Variáveis Horizonte da Cidade](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/15_variaveis-horizonte-cidade.html)
 6. [Revista](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/16_criando-revista.html)
+7. [Projeto certificado](https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/17_projeto-certificado.html)
