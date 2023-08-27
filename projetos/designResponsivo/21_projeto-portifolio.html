@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://mlsfront.com/img/icon/mlsfront-icon.ico">
+  <title>MLSFront Portifólio</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Courier+New:wght@300&family=Roboto+Mono&family=Roboto+Slab&family=Ubuntu+Condensed&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    :root {
+        --amarelo: #e39d10;
+        --azul: #10bde0;
+        --azul-claro: #c9dfff;
+        --azul-escuro: #131b38;
+        --azul-vivo: ##0088cc;
+        --azul-gradient: #131b38, #192039, #0088cc;
+        --cinza-escuro: #232526;
+        --verde-escuro: #0c100c;
+        --verde-medio: #059a13;
+    }
+    
+    html {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    #navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--cinza-escuro);
+        border-bottom: 1px solid var(--amarelo);
+    }
+    
+    #navbar ul {
+        padding: 25px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    #navbar a {
+        display: flex;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--amarelo);
+        margin-left: 25px;
+        transition: all 1s ease;
+        font-size: 1em;
+    }
+    
+    #navbar a:hover {
+        color: var(--azul-claro);
+        transition: all 1s ease;
+    }
+    
+    section {
+        padding: 78px 0;
+    }
+    
+    #welcome-section {
+        background: linear-gradient(90DEG, #131b38, #192039, #0088cc);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1, h2, h3 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    #welcome-section h1 {
+        font-size: 3em;
+        color: var(--azul-claro);
+    }
+    
+    #welcome-section h3 {
+        color: var(--amarelo);
+        padding-top: 7px;
+    }
+    
+    #imgMlsfront {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        transform-origin: 50% 50%;
+        animation: imgMlsfront 10s ease-in-out infinite;
+    }
+    
+    @keyframes imgMlsfront {
+        0%   {background-color: var(--azul-escuro)}
+        25%  {background-color: var(--azul-claro)}
+        50%  {background-color: var(--azul)}
+        75%  {background-color: var(--cinza-escuro)}
+        100% {background-color: var(--amarelo)}
+     }
+    
+    #welcome-section img {
+        width: 220px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    
+    /* PROJECTS */
+    #projects {
+        background-color: var(--azul-claro);
+    }
+    
+    #projects header {
+        font-size: 2em;
+        margin-top: 14px;
+        margin-bottom: 54px;
+        text-align: center;
+    }
+    
+    #projects > header, .title-item {
+        color: var(--azul-escuro);
+        text-shadow: 1px 1px var(--azul);
+    }
+    
+    #projects .title-item {
+        font-size: 1.5em;
+    }
+    
+    #projects .my-projects {
+        width: calc(33% -10px);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 44px 0;
+    }
+    
+    #projects figure {
+        cursor: pointer;
+        box-shadow: 1px 1px 12px #232526;
+        border-radius: 7px;
+        object-fit: cover;
+    }
+    
+    #projects figure > a {
+        margin: -7px;
+    }
+    
+    .item figure img {
+        border-bottom: 1px solid var(--amarelo);
+    }
+    
+    #projects figcaption {
+        margin-left: -7px;
+    }
+    
+    #projects img {
+        border-radius: 7px 7px 0 0;
+    }
+    
+    .my-projects figcaption {
+        background-color: var(--cinza-escuro);
+        color: var(--amarelo);
+        text-overflow: 1px 1px 5px var(--cinza-escuro);
+        padding: 14px;
+        margin-top: -4px;
+        text-align: right;
+        border-radius: 0 0 7px 7px;
+        text-transform: capitalize;
+    }
+    
+    /* PROFILE */
+    #profile {
+        background: linear-gradient(90DEG, #131b38, #192039, #0088cc);
+        color: var(--amarelo);
+        height: 78vh;
+    }
+    
+    #profile header {
+        font-size: 2em;
+        margin-bottom: 54px;
+        text-align: center;
+    }
+    
+    #profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+      
+    .link-profile > a{
+        font-size: 1.3em;
+        padding: 7px;
+        text-decoration: none;
+        color: var(--amarelo);
+        transition: transform 0.3s ease-out;
+    }
+    
+    .link-profile>  a:hover {
+        color: var(--azul-claro);
+        transform: translateY(8px);
+    }
+    
+    /* FOOTER */
+    footer {
+        background-color: var(--cinza-escuro);
+        border-top: 1px solid var(--amarelo);
+        padding: 25px;
+        color: var(--azul-claro);
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    footer > p > a {
+        text-decoration: none;
+        font-size: 1em;
+        color: var(--amarelo);
+    }
+    
+    footer > p > a:hover {
+        color: var(--azul-claro);
+    }
+    
+    @media only screen and (max-width:600px) {
+        #navbar .nav-link {
+            margin-left: 7px;
+            text-transform: capitalize;
+        }
+    
+        h2 {
+            font-size: 1em;
+            padding: 14px;
+        }
+    
+        #projects .item {
+            width: 80%;
+        }
+    
+        #projects figure {
+            box-shadow: none;
+        }
+    
+        #projects figcaption {
+            margin-right: 7px;
+            margin-top: -4px;
+        }
+    
+        .item figure img {
+            border-bottom: 1px solid var(--amarelo);
+            height: auto;
+            min-height: 300px;
+            max-height: 400px;
+            margin-bottom: 0;
+        }
+    
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        .link-profile {
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+  </style>  
+</head>
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a class="nav-link" href="#welcome-section">home</a></li>
+      <li><a class="nav-link" href="#projects">projetos</a></li>
+      <li><a class="nav-link" href="#profile">perfil</a></li>
+    </ul>
+  </nav>
+
+  <section id="welcome-section">
+    <h1>MLSFront</h1>
+    
+    <div id="imgMlsfront">
+      <img src="https://mlsfront.com/img/mlsfront.png" loading="lazy" alt="mlsfront">
+    </div>
+    
+    <h3>Web Designer</h3>
+  </section>
+
+  <section id="projects">
+    <header>
+      <h2 class="project-tile">Alguns Projetos</h2>
+    </header>
+    
+    <div class="my-projects">
+      <div class="item">
+        <h3 class="title-item">Formulário</h3>
+        <figure>
+          <a href="https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/05_projeto-certificado.html"><img src="https://mlsfront.com/img/projetos/mlsfront-formulario.png" loading="lazy" alt="Formulário"></a>
+          <figcaption>formulário interativo</figcaption>
+        </figure>
+      </div>
+      
+      <div class="item">
+        <h3 class="title-item">Produto</h3>
+        <figure>
+          <a href="https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/17_projeto-certificado.html"><img src="https://mlsfront.com/img/projetos/mlsfront-produto.png" loading="lazy" alt="Produto"></a>
+          <figcaption>página Produto</figcaption>
+        </figure>
+      </div>
+      
+      <div class="item">
+        <h3 class="title-item">freeCodeCamp</h3>
+        <figure>
+          <a href="https://mlsfront.github.io/freeCodeCamp/projetos/designResponsivo/10_projeto-certificado.html"><img src="https://mlsfront.com/img/projetos/mlsfront-freecodecamp.png" loading="lazy" alt="freeCodeCamp"></a>
+          <figcaption>tributo freeCodeCamp</figcaption>
+        </figure>
+      </div>
+      
+      <div class="item">
+        <h3 class="title-item">Tabuada</h3>
+        <figure>
+          <a href="https://mlsfront.github.io/lori/"><img src="https://mlsfront.com/img/projetos/mlsfront-tabuada.png" loading="lazy" alt="Tabuada JS"></a>
+          <figcaption class="border">tabuada javascript</figcaption>
+        </figure>
+      </div>
+      
+      <div class="item">
+        <h3 class="title-item">Tarefas</h3>
+        <figure>
+          <a href="https://github.com/mlsfront/tarefas"><img src="https://mlsfront.com/img/projetos/mlsfront-tarefas.png" loading="lazy" alt="Tarefas PHP"></a>
+          <figcaption class="border">cadastro de tarfeas php</figcaption>
+        </figure>
+      </div>
+      
+      <div class="item">
+        <h3 class="title-item">Programação</h3>
+        <figure>
+          <a href="https://mlsfront.github.io/"><img src="https://mlsfront.com/img/projetos/mlsfront-programacao.png" loading="lazy" alt="Programação"></a>
+          <figcaption class="border">Conteúdo de estudo</figcaption>
+        </figure>
+      </div>
+    </div> 
+  </section>
+
+  <section id="profile">
+    <header>
+      <h2>Visite meu perfil</h2>
+    </header>
+    
+    <div class="link-profile">    
+      <a id="profile-link" href="https://www.freecodecamp.org/portuguese/mlsfront" target="_blank"><i class="fab fa-free-code-camp"></i> freeCodeCamp</a>
+    </div>
+  </section>
+
+  <footer>    
+    <p>
+      &copy; by <a href="https://github.com/mlsfront/" target="_parent">MLSFront <i class="fab fa-github"></i></a>
+    </p>
+  </footer>
+  
+</body>
+</html>
